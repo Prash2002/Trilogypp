@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "69428546709",
+    "firebase_url": "https://trilogypp-82eab.firebaseio.com",
+    "project_id": "trilogypp-82eab",
+    "storage_bucket": "trilogypp-82eab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69428546709:android:210f8c0be4bb4efd045f9c",
+        "android_client_info": {
+          "package_name": "com.trilogypp.eapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69428546709-5rmaelsp9mkm5ki8hdksoun3a9ku2kkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-PeeHvMuIjF-m7QYb8TIcd1bjwzvPgMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69428546709-5rmaelsp9mkm5ki8hdksoun3a9ku2kkt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
