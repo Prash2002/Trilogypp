@@ -10,7 +10,7 @@ class _LoadingState extends State<Loading> {
   @override
   void RunThis() async {
     await Future.delayed(const Duration(seconds: 2), () {});
-    Navigator.pushReplacementNamed(context, '/home');
+    Navigator.pushReplacementNamed(context, '/login');
   }
 
   @override

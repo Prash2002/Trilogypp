@@ -13,6 +13,9 @@ class _HomeState extends State<Home> {
         title: Text('Hello'),
         centerTitle: true,
       ),
+      body: Center(
+        child: Text('This is the home page '),
+      ),
     );
   }
 }
