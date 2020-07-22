@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -59,31 +59,178 @@ class _LoginState extends State<Login> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SignInButtonBuilder(
-            text: 'Get going with Email',
-            icon: Icons.email,
-            onPressed: () {
-              Navigator.pushReplacementNamed(context, '/home');
-            },
-            backgroundColor: Colors.blueGrey[700],
-            width: 220.0,
+        FlatButton(
+          onPressed: () {
+          signInWithGoogle().whenComplete(() {
+           Navigator.pushReplacementNamed(context, '/home');
+          });
+           },
+          child: Container(
+            child: Center(
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Ionicons.md_mail,
+                    color: Colors.white,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Get going with Email',
+                      style: TextStyle(
+                        fontFamily: 'Helvetica Neue',
+                        fontSize: 20,
+                        color: const Color(0xffffffff),
+                        fontWeight: FontWeight.w700,
+                        shadows: [
+                          Shadow(
+                            color: const Color(0x4d000000),
+                            offset: Offset(0, 3),
+                            blurRadius: 6,
+                          )
+                        ],
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            width: 250.0,
+            height: 50.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(28.0),
+              color: const Color(0xff656980),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xffe0d7d7),
+                  offset: Offset(0, 3),
+                  blurRadius: 6,
+                ),
+              ],
+            ),
           ),
+        ),
+
           Divider(),
-          SignInButton(
-            Buttons.Google,
+          FlatButton(
             onPressed: () {
               signInWithGoogle().whenComplete(() {
                 Navigator.pushReplacementNamed(context, '/home');
               });
             },
+            child: Container(
+              child: Center(
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                          Ionicons.logo_google,
+                      color: Colors.white,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Sign in with Google',
+                        style: TextStyle(
+                          fontFamily: 'Helvetica Neue',
+                          fontSize: 20,
+                          color: const Color(0xffffffff),
+                          fontWeight: FontWeight.w700,
+                          shadows: [
+                            Shadow(
+                              color: const Color(0x4d000000),
+                              offset: Offset(0, 3),
+                              blurRadius: 6,
+                            )
+                          ],
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              width: 250.0,
+              height: 50.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(28.0),
+                color: const Color(0xff656980),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xffe0d7d7),
+                    offset: Offset(0, 3),
+                    blurRadius: 6,
+                  ),
+                ],
+              ),
+            ),
           ),
+
           Divider(),
-          SignInButton(
-            Buttons.Apple,
+          FlatButton(
             onPressed: () {
-              Navigator.pushReplacementNamed(context, '/home');
-            },
+             Navigator.pushReplacementNamed(context, '/home');
+               },
+
+
+            child: Container(
+
+              child: Center(
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(
+                          Ionicons.logo_apple,
+                      color: Colors.white,),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                            'Sign in with Apple',
+                            style: TextStyle(
+                              fontFamily: 'Helvetica Neue',
+                              fontSize: 20,
+                              color: const Color(0xffffffff),
+                              fontWeight: FontWeight.w700,
+                              shadows: [
+                                Shadow(
+                                  color: const Color(0x4d000000),
+                                  offset: Offset(0, 3),
+                                  blurRadius: 6,
+                                )
+                              ],
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                    ),
+                  ],
+                ),
+
+
+              ),
+              width: 250.0,
+              height: 50.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(28.0),
+                color: const Color(0xff656980),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xffe0d7d7),
+                    offset: Offset(0, 3),
+                    blurRadius: 6,
+                  ),
+                ],
+              ),
+            ),
           ),
+
           Divider(),
         ],
       ),
